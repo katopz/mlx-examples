@@ -31,6 +31,12 @@ def build_parser():
         help="The maximum number of tokens to generate",
     )
     parser.add_argument(
+        "--eos-token",
+        type=str,
+        default=None,
+        help="End of sequence token for tokenizer",
+    )
+    parser.add_argument(
         "--temp", type=float, default=0.8, help="The sampling temperature"
     )
     parser.add_argument(
